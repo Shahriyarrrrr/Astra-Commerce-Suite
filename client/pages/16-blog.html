@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astra — Blog</title>
+  <link rel="stylesheet" href="/css/16-blog.css"/>
+</head>
+<body>
+<div id="blogApp" class="theme-light">
+
+  <header class="bl-header">
+    <a class="logo" href="/pages/01-home.html">Astra</a>
+    <div class="bl-controls">
+      <select id="blFilter">
+        <option value="">All categories</option>
+        <option value="updates">Updates</option>
+        <option value="guides">Guides</option>
+        <option value="news">News</option>
+      </select>
+      <button id="blTheme" class="btn-icon">Theme</button>
+    </div>
+  </header>
+
+  <main class="bl-main">
+    <h1>Blog</h1>
+
+    <div id="blogGrid" class="bl-grid"></div>
+    <div id="blogEmpty" class="bl-empty">No posts found</div>
+  </main>
+
+  <aside id="blDrawer" class="bl-drawer">
+    <button id="blClose" class="bl-close">✕</button>
+    <div id="blContent" class="bl-content"></div>
+  </aside>
+
+</div>
+
+<script type="module" src="/js/16-blog.js"></script>
+</body>
+</html>

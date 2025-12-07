@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astra Developer Portal</title>
+  <link rel="stylesheet" href="/css/12-developer-portal.css"/>
+</head>
+<body>
+<div id="devApp" class="theme-light">
+
+  <header class="dev-header">
+    <div class="dev-title">Developer Portal</div>
+    <button id="devTheme" class="btn-icon">Theme</button>
+  </header>
+
+  <main class="dev-main">
+
+    <section class="dev-section">
+      <h2>Your API Key</h2>
+      <div class="key-box">
+        <input id="devKey" readonly/>
+        <button id="genKey" class="btn">Generate</button>
+      </div>
+    </section>
+
+    <section class="dev-section">
+      <h2>API Request Tester</h2>
+      <div class="tester">
+        <select id="reqMethod">
+          <option>GET</option>
+          <option>POST</option>
+        </select>
+        <input id="reqEndpoint" placeholder="/api/demo"/>
+        <textarea id="reqBody" placeholder="JSON body (optional)"></textarea>
+        <button id="sendReq" class="btn primary">Send</button>
+      </div>
+      <div class="tester-response">
+        <h3>Response</h3>
+        <pre id="respBox"></pre>
+      </div>
+    </section>
+
+    <section class="dev-section">
+      <h2>Usage Logs</h2>
+      <div id="logFeed" class="log-feed"></div>
+    </section>
+
+    <section class="dev-section">
+      <h2>API Example Code</h2>
+      <pre id="codeView" class="code-view"></pre>
+    </section>
+
+  </main>
+
+  <div id="devToast" class="dev-toast">Saved</div>
+
+</div>
+
+<script type="module" src="/js/12-developer-portal.js"></script>
+</body>
+</html>

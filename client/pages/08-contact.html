@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astra — Contact Us</title>
+  <link rel="stylesheet" href="/css/08-contact.css"/>
+</head>
+<body>
+  <div id="contactApp" class="theme-light">
+
+    <div class="bg-particles"></div>
+
+    <header class="ct-header">
+      <a href="/pages/01-home.html" class="logo">Astra</a>
+      <button id="ctTheme" class="btn-icon">Theme</button>
+    </header>
+
+    <section class="ct-hero">
+      <h1>Get in Touch</h1>
+      <p>We are here to help. Reach out for support, feedback, or partnership.</p>
+    </section>
+
+    <section class="ct-main">
+      <div class="ct-left">
+        <h2>Send us a message</h2>
+        <form id="ctForm" class="ct-form">
+          <input id="ctName" placeholder="Your Name"/>
+          <input id="ctEmail" placeholder="Your Email"/>
+          <input id="ctSubject" placeholder="Subject"/>
+          <textarea id="ctMessage" placeholder="Your Message"></textarea>
+          <button id="ctSend" class="btn primary">Send Message</button>
+        </form>
+      </div>
+
+      <div class="ct-right">
+        <h2>Contact Information</h2>
+        <div id="ctCards" class="ct-cards"></div>
+
+        <h2>Our Location</h2>
+        <div id="ctMap" class="ct-map"></div>
+      </div>
+    </section>
+
+    <div id="ctOverlay" class="ct-overlay">
+      <div class="ct-overlay-box">
+        <div class="loader"></div>
+        <p>Sending...</p>
+      </div>
+    </div>
+
+    <footer class="ct-footer">
+      © Astra Contact
+    </footer>
+
+  </div>
+
+  <script type="module" src="/js/08-contact.js"></script>
+</body>
+</html>

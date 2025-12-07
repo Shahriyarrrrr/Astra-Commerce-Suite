@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Astra — Home</title>
+  <link rel="stylesheet" href="/css/01-home.css" />
+</head>
+<body>
+  <div id="app" class="theme-light">
+    <header class="site-header">
+      <div class="brand">
+        <img src="/assets/images/logos/placeholder-logo.png" alt="logo" />
+        <h1>Astra</h1>
+      </div>
+      <nav class="nav">
+        <button id="themeToggle" class="btn-icon">Theme</button>
+        <div class="search">
+          <input id="searchInput" type="search" placeholder="Search products..." />
+        </div>
+        <button id="openLogin" class="btn primary">Login</button>
+        <div id="cartWidget" class="cart-widget"></div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <video id="heroVid" autoplay muted loop playsinline class="hero-video">
+          <source src="/assets/videos/loop-hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <h2 class="hero-title">Shop Future-Ready Gear</h2>
+            <p class="hero-sub">Premium electronics, exclusive drops, and rapid shipping</p>
+            <div class="hero-actions">
+              <a href="/pages/02-catalog.html" class="btn large">Explore Catalog</a>
+              <button id="playAudio" class="btn ghost">Play Ambience</button>
+            </div>
+          </div>
+          <div class="hero-tiles" aria-hidden="true">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="feature" data-anim="fade">
+          <h3>Smart search</h3>
+          <p>Instant filtering and sorting with live UI feedback</p>
+        </div>
+        <div class="feature" data-anim="fade" data-delay="120">
+          <h3>Persistent cart</h3>
+          <p>Saved locally and synced to your account</p>
+        </div>
+        <div class="feature" data-anim="fade" data-delay="240">
+          <h3>Multi-theme</h3>
+          <p>Light, dark and high-contrast modes</p>
+        </div>
+      </section>
+
+      <section class="product-section">
+        <div class="section-header">
+          <h2>Featured Products</h2>
+          <div class="controls">
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+        <div id="loadMoreWrap" class="load-more-wrap">
+          <button id="loadMore" class="btn">Load more</button>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <div class="newsletter-card">
+          <h3>Join Astra Prime</h3>
+          <form id="newsletterForm">
+            <input id="newsletterEmail" type="email" placeholder="you@example.com" required />
+            <button class="btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>© Astra E-Commerce</div>
+      <div class="footer-links">
+        <a href="/pages/17-terms.html">Terms</a>
+        <a href="/pages/07-about.html">About</a>
+      </div>
+    </footer>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-panel">
+        <div class="modal-left">
+          <h2>Sign in</h2>
+          <form id="loginForm">
+            <input id="loginEmail" name="email" type="email" placeholder="Email" required />
+            <input id="loginPassword" name="password" type="password" placeholder="Password" required />
+            <div class="role-switch">
+              <label><input type="radio" name="role" value="user" checked />User</label>
+              <label><input type="radio" name="role" value="developer" />Developer</label>
+              <label><input type="radio" name="role" value="admin" />Admin</label>
+            </div>
+            <div class="modal-actions">
+              <button type="submit" class="btn primary">Sign in</button>
+              <button type="button" id="closeLogin" class="btn ghost">Cancel</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-right">
+          <div class="motion-visual">
+            <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1">
+                  <stop offset="0" stop-color="#6EE7B7"/>
+                  <stop offset="1" stop-color="#3B82F6"/>
+                </linearGradient>
+              </defs>
+              <circle cx="100" cy="100" r="70" fill="url(#g1)">
+                <animate attributeName="r" dur="6s" values="60;72;60" repeatCount="indefinite" />
+              </circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <audio id="bgAudio" loop src="/assets/audio/bg-loop.mp3"></audio>
+
+  <script type="module" src="/js/01-home.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astra — Register</title>
+  <link rel="stylesheet" href="/css/10-register.css"/>
+</head>
+<body>
+  <div id="regApp" class="theme-light">
+    <div class="reg-wrapper">
+      <div class="reg-head">
+        <h1>Create account</h1>
+        <p>Join Astra — access developer tools, manage orders, and more.</p>
+      </div>
+
+      <div class="reg-steps">
+        <div class="step-indicator" data-step="1">1</div>
+        <div class="step-indicator" data-step="2">2</div>
+        <div class="step-indicator" data-step="3">3</div>
+      </div>
+
+      <form id="regForm" class="reg-form">
+        <section class="reg-panel active" data-panel="1">
+          <input id="rName" placeholder="Full name" />
+          <input id="rEmail" placeholder="Email" />
+          <div class="role-select">
+            <label><input type="radio" name="rRole" value="user" checked/>User</label>
+            <label><input type="radio" name="rRole" value="developer"/>Developer</label>
+          </div>
+          <div class="buttons">
+            <button id="toReg2" class="btn">Next</button>
+          </div>
+        </section>
+
+        <section class="reg-panel" data-panel="2">
+          <input id="rPassword" type="password" placeholder="Password" />
+          <input id="rConfirm" type="password" placeholder="Confirm password" />
+          <div class="pw-status">
+            <div id="pwMatch">Passwords match: <span id="pwMatchState">no</span></div>
+            <div id="pwStrength">Strength: <span id="pwStrengthState">0%</span></div>
+          </div>
+          <div class="buttons">
+            <button id="backReg1" class="btn ghost">Back</button>
+            <button id="toReg3" class="btn">Next</button>
+          </div>
+        </section>
+
+        <section class="reg-panel" data-panel="3">
+          <div class="otp-wrap">
+            <input id="otpInput" placeholder="Enter OTP" />
+            <button id="sendOtp" class="btn ghost">Send OTP</button>
+          </div>
+          <div id="otpMsg" class="otp-msg"></div>
+          <div class="buttons">
+            <button id="backReg2" class="btn ghost">Back</button>
+            <button id="completeReg" class="btn primary">Create Account</button>
+          </div>
+        </section>
+      </form>
+
+      <div id="regToast" class="reg-toast">Processing...</div>
+    </div>
+  </div>
+
+  <script type="module" src="/js/10-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.site-footer{padding:40px 24px;background:var(--bg-footer);color:var(--text)}
+.footer-main{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.footer-brand{display:flex;align-items:center}
+.footer-logo{width:44px;height:44px;border-radius:10px;margin-right:10px}
+.footer-title{font-weight:800;font-size:20px}
+.footer-links{display:flex;gap:20px}
+.footer-links a{text-decoration:none;color:var(--text-muted);transition:0.2s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{text-align:center;margin-top:20px;color:var(--text-muted)}

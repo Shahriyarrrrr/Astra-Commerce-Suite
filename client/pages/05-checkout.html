@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astra — Checkout</title>
+  <link rel="stylesheet" href="/css/05-checkout.css"/>
+</head>
+<body>
+  <div id="checkoutApp" class="theme-light">
+
+    <header class="co-header">
+      <a href="/pages/04-cart.html" class="back">← Back to Cart</a>
+      <button id="coTheme" class="btn-icon">Theme</button>
+    </header>
+
+    <main class="co-main">
+      <div class="steps">
+        <div class="step active" data-step="1">Address</div>
+        <div class="step" data-step="2">Shipping</div>
+        <div class="step" data-step="3">Payment</div>
+        <div class="step" data-step="4">Review</div>
+      </div>
+
+      <section id="step1" class="step-panel active">
+        <h2>Shipping Address</h2>
+        <div class="form-grid">
+          <input id="name" placeholder="Full Name"/>
+          <input id="email" placeholder="Email"/>
+          <input id="phone" placeholder="Phone"/>
+          <input id="line1" placeholder="Address Line 1"/>
+          <input id="line2" placeholder="Address Line 2"/>
+          <input id="city" placeholder="City"/>
+          <input id="zip" placeholder="Postal Code"/>
+          <input id="country" placeholder="Country"/>
+        </div>
+        <button id="toStep2" class="btn next-btn">Continue</button>
+      </section>
+
+      <section id="step2" class="step-panel">
+        <h2>Shipping Method</h2>
+        <div class="ship-options">
+          <label class="ship-card">
+            <input type="radio" name="ship" value="standard" checked/>
+            <div class="ship-info">
+              <h3>Standard</h3>
+              <p>3–5 days</p>
+              <div class="ship-cost">$5.00</div>
+            </div>
+          </label>
+
+          <label class="ship-card">
+            <input type="radio" name="ship" value="express"/>
+            <div class="ship-info">
+              <h3>Express</h3>
+              <p>1–2 days</p>
+              <div class="ship-cost">$12.00</div>
+            </div>
+          </label>
+        </div>
+
+        <div class="nav-btns">
+          <button id="back1" class="btn ghost">Back</button>
+          <button id="toStep3" class="btn next-btn">Continue</button>
+        </div>
+      </section>
+
+      <section id="step3" class="step-panel">
+        <h2>Payment Method</h2>
+        <div class="pay-options">
+          <label class="pay-card">
+            <input type="radio" name="pay" value="card" checked/>
+            <div class="pay-info">Card Payment</div>
+          </label>
+          <label class="pay-card">
+            <input type="radio" name="pay" value="paypal"/>
+            <div class="pay-info">PayPal</div>
+          </label>
+          <label class="pay-card">
+            <input type="radio" name="pay" value="cod"/>
+            <div class="pay-info">Cash on Delivery</div>
+          </label>
+        </div>
+        <div class="nav-btns">
+          <button id="back2" class="btn ghost">Back</button>
+          <button id="toStep4" class="btn next-btn">Continue</button>
+        </div>
+      </section>
+
+      <section id="step4" class="step-panel">
+        <h2>Review Your Order</h2>
+        <div id="reviewCart" class="review-cart"></div>
+
+        <div class="review-summary">
+          <div class="sum-row"><span>Subtotal</span><span id="rvSubtotal">$0.00</span></div>
+          <div class="sum-row"><span>Shipping</span><span id="rvShipping">$0.00</span></div>
+          <div class="sum-row total"><span>Total</span><span id="rvTotal">$0.00</span></div>
+        </div>
+
+        <button id="placeOrder" class="btn primary big">Place Order</button>
+        <button id="back3" class="btn ghost">Back</button>
+      </section>
+    </main>
+
+    <div id="coToast" class="co-toast">Processing...</div>
+
+    <footer class="co-footer">
+      © Astra Checkout
+    </footer>
+  </div>
+
+  <script type="module" src="/js/05-checkout.js"></script>
+</body>
+</html>

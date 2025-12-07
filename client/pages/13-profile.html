@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astra — Profile</title>
+  <link rel="stylesheet" href="/css/13-profile.css"/>
+</head>
+<body>
+<div id="profileApp" class="theme-light">
+
+  <header class="pr-header">
+    <a href="/pages/01-home.html" class="logo">Astra</a>
+    <button id="prTheme" class="btn-icon">Theme</button>
+  </header>
+
+  <main class="pr-main">
+    <div class="pr-container">
+
+      <aside class="pr-tabs">
+        <button class="tab-btn active" data-tab="overview">Overview</button>
+        <button class="tab-btn" data-tab="edit">Edit Profile</button>
+        <button class="tab-btn" data-tab="settings">Settings</button>
+      </aside>
+
+      <section class="pr-content">
+
+        <div id="tab-overview" class="tab-page active">
+          <div class="ov-card">
+            <img id="ovAvatar" class="avatar" src="/assets/images/product-placeholder.png"/>
+            <h2 id="ovName">User</h2>
+            <p id="ovEmail"></p>
+            <p id="ovBio" class="bio">No bio available.</p>
+          </div>
+        </div>
+
+        <div id="tab-edit" class="tab-page">
+          <div class="edit-card">
+            <div class="img-wrap">
+              <img id="editAvatar" class="avatar" src="/assets/images/product-placeholder.png"/>
+              <input id="fileAvatar" type="file" accept="image/*"/>
+            </div>
+            <input id="editName" placeholder="Full Name"/>
+            <input id="editEmail" placeholder="Email"/>
+            <textarea id="editBio" placeholder="Bio"></textarea>
+            <button id="saveProfile" class="btn primary">Save</button>
+          </div>
+        </div>
+
+        <div id="tab-settings" class="tab-page">
+          <div class="settings-card">
+            <label class="row">
+              <span>Dark Mode</span>
+              <input id="setTheme" type="checkbox"/>
+            </label>
+            <label class="row">
+              <span>Notifications</span>
+              <input id="setNotify" type="checkbox"/>
+            </label>
+            <button id="saveSettings" class="btn">Save Settings</button>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <div id="prToast" class="pr-toast">Saved</div>
+
+</div>
+
+<script type="module" src="/js/13-profile.js"></script>
+</body>
+</html>

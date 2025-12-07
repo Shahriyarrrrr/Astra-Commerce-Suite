@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astra Admin</title>
+  <link rel="stylesheet" href="/css/11-admin-dashboard.css"/>
+</head>
+<body>
+<div id="adminApp" class="theme-light">
+
+  <aside id="adminSidebar" class="sidebar">
+    <div class="sb-logo">Astra Admin</div>
+    <nav class="sb-nav">
+      <button class="sb-item active" data-page="metrics">Dashboard</button>
+      <button class="sb-item" data-page="products">Products</button>
+      <button class="sb-item" data-page="orders">Orders</button>
+      <button class="sb-item" data-page="activity">Activity</button>
+    </nav>
+    <button id="adminTheme" class="sb-theme">Theme</button>
+  </aside>
+
+  <main id="adminMain" class="main">
+    <section id="page-metrics" class="page active">
+      <h1>Overview</h1>
+      <div class="metrics-grid">
+        <div class="metric-card"><div class="m-value" id="mOrders">0</div><div class="m-label">Total Orders</div></div>
+        <div class="metric-card"><div class="m-value" id="mRevenue">$0</div><div class="m-label">Revenue</div></div>
+        <div class="metric-card"><div class="m-value" id="mUsers">0</div><div class="m-label">Users</div></div>
+      </div>
+    </section>
+
+    <section id="page-products" class="page">
+      <h1>Products</h1>
+      <button id="addProductBtn" class="btn primary">Add Product</button>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Title</th><th>Price</th><th>Stock</th><th></th></tr></thead>
+          <tbody id="productTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="page-orders" class="page">
+      <h1>Orders</h1>
+      <div id="ordersList" class="orders-list"></div>
+    </section>
+
+    <section id="page-activity" class="page">
+      <h1>Activity Log</h1>
+      <div id="activityFeed" class="activity-feed"></div>
+    </section>
+  </main>
+
+  <div id="productModal" class="modal">
+    <div class="modal-box">
+      <h2 id="modalTitle">New Product</h2>
+      <input id="pTitle" placeholder="Title"/>
+      <input id="pPrice" placeholder="Price"/>
+      <input id="pStock" placeholder="Stock"/>
+      <div class="modal-btns">
+        <button id="pSave" class="btn primary">Save</button>
+        <button id="pCancel" class="btn ghost">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="adminToast" class="admin-toast">Saved</div>
+
+</div>
+<script type="module" src="/js/11-admin-dashboard.js"></script>
+</body>
+</html>

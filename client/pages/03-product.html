@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astra — Product</title>
+  <link rel="stylesheet" href="/css/03-product.css"/>
+</head>
+<body>
+  <div id="productApp" class="theme-light">
+    <header class="p-header">
+      <a href="/pages/02-catalog.html" class="back-btn">← Back</a>
+      <button id="productTheme" class="btn-icon">Theme</button>
+    </header>
+
+    <main class="p-main">
+      <section class="p-gallery">
+        <div class="p-main-img-wrap">
+          <img id="pMainImg" class="p-main-img" src="/assets/images/product-placeholder.png" />
+        </div>
+        <div id="pThumbs" class="p-thumbs"></div>
+      </section>
+
+      <section class="p-info">
+        <h1 id="pTitle" class="p-title">Product Name</h1>
+        <div id="pPrice" class="p-price">USD 0.00</div>
+        <div id="pRating" class="p-rating">4.5 ★</div>
+        <p id="pDesc" class="p-desc">Loading...</p>
+
+        <div class="variant-wrap">
+          <label>Variants</label>
+          <div id="pVariants" class="variant-list"></div>
+        </div>
+
+        <div class="qty-wrap">
+          <button id="qtyMinus" class="qty-btn">-</button>
+          <input id="qtyInput" type="number" value="1" min="1"/>
+          <button id="qtyPlus" class="qty-btn">+</button>
+        </div>
+
+        <button id="addToCart" class="btn primary big">Add to Cart</button>
+
+        <div class="p-meta-section">
+          <h3>Highlights</h3>
+          <ul id="pHighlights" class="p-highlights"></ul>
+        </div>
+      </section>
+    </main>
+
+    <section class="p-reviews">
+      <h2>Customer Reviews</h2>
+      <div id="reviewList" class="review-list"></div>
+    </section>
+
+    <footer class="p-footer">
+      <div>© Astra Product Page</div>
+    </footer>
+  </div>
+
+  <script type="module" src="/js/03-product.js"></script>
+</body>
+</html>

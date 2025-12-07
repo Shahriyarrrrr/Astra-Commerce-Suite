@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astra — Wishlist</title>
+  <link rel="stylesheet" href="/css/15-wishlist.css"/>
+</head>
+<body>
+<div id="wishApp" class="theme-light">
+
+  <header class="ws-header">
+    <a href="/pages/01-home.html" class="logo">Astra</a>
+    <button id="wsTheme" class="btn-icon">Theme</button>
+  </header>
+
+  <main class="ws-main">
+    <h1>Your Wishlist</h1>
+    <div id="wishGrid" class="ws-grid"></div>
+    <div id="wsEmpty" class="ws-empty">Your wishlist is empty</div>
+  </main>
+
+  <div id="wsModal" class="ws-modal">
+    <div class="ws-modal-box">
+      <button id="wsClose" class="ws-close">✕</button>
+      <img id="wsImg" class="ws-img" src=""/>
+      <h2 id="wsTitle"></h2>
+      <p id="wsPrice"></p>
+      <button id="wsRemove" class="btn danger">Remove</button>
+    </div>
+  </div>
+
+</div>
+
+<script type="module" src="/js/15-wishlist.js"></script>
+</body>
+</html>

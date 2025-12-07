@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astra — Orders</title>
+  <link rel="stylesheet" href="/css/14-orders.css"/>
+</head>
+<body>
+  <div id="ordersApp" class="theme-light">
+    <header class="od-header">
+      <a href="/pages/01-home.html" class="logo">Astra</a>
+      <div class="od-controls">
+        <select id="filterStatus">
+          <option value="">All statuses</option>
+          <option value="pending">Pending</option>
+          <option value="processing">Processing</option>
+          <option value="shipped">Shipped</option>
+          <option value="delivered">Delivered</option>
+        </select>
+        <input id="filterDate" type="date"/>
+        <button id="odTheme" class="btn-icon">Theme</button>
+      </div>
+    </header>
+
+    <main class="od-main">
+      <section class="od-list-wrap">
+        <div id="ordersList" class="orders-list"></div>
+        <div id="ordersEmpty" class="orders-empty">No orders found</div>
+      </section>
+
+      <aside id="orderDrawer" class="order-drawer">
+        <button id="closeDrawer" class="drawer-close">✕</button>
+        <div id="drawerContent" class="drawer-content"></div>
+      </aside>
+    </main>
+
+    <footer class="od-footer">© Astra Orders</footer>
+  </div>
+
+  <script type="module" src="/js/14-orders.js"></script>
+</body>
+</html>

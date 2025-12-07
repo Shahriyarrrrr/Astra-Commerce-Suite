@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Astra — Catalog</title>
+  <link rel="stylesheet" href="/css/02-catalog.css" />
+</head>
+<body>
+  <div id="catalogApp" class="theme-light">
+    <header class="catalog-header">
+      <div class="brand">
+        <img src="/assets/images/logos/placeholder-logo.png" alt="logo" />
+        <h1>Astra Catalog</h1>
+      </div>
+      <div class="catalog-controls">
+        <div class="search-wrap">
+          <input id="catalogSearch" placeholder="Search products, brands or tags" />
+          <button id="openFilters" class="btn ghost">Filters</button>
+        </div>
+        <div class="sort-wrap">
+          <select id="catalogSort">
+            <option value="relevance">Relevance</option>
+            <option value="price-asc">Price low → high</option>
+            <option value="price-desc">Price high → low</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </div>
+        <button id="catalogTheme" class="btn-icon">Theme</button>
+      </div>
+    </header>
+
+    <div class="catalog-body">
+      <aside id="leftFilters" class="filters-panel">
+        <div class="filters-header">
+          <h3>Filters</h3>
+          <button id="clearFilters" class="btn ghost">Clear</button>
+        </div>
+        <div class="filter-group">
+          <label>Category</label>
+          <select id="filterCategory">
+            <option value="">All</option>
+            <option value="audio">Audio</option>
+            <option value="wearables">Wearables</option>
+            <option value="peripherals">Peripherals</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Price</label>
+          <div class="range-wrap">
+            <input id="minPrice" type="number" placeholder="Min" />
+            <input id="maxPrice" type="number" placeholder="Max" />
+          </div>
+        </div>
+        <div class="filter-group">
+          <label>Rating</label>
+          <div class="rating-filters">
+            <label><input type="radio" name="rating" value="4" />4+ stars</label>
+            <label><input type="radio" name="rating" value="3" />3+ stars</label>
+            <label><input type="radio" name="rating" value="0" checked />Any</label>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label>Stock</label>
+          <label><input type="checkbox" id="inStock" />In stock only</label>
+        </div>
+      </aside>
+
+      <section class="catalog-main">
+        <div id="catalogGrid" class="catalog-grid"></div>
+        <div id="infiniteLoader" class="infinite-loader">Loading more...</div>
+      </section>
+    </div>
+
+    <footer class="catalog-footer">
+      <div>© Astra Catalog</div>
+    </footer>
+
+    <div id="productCardTemplateHolder" style="display:none"></div>
+
+    <div id="productCardPartial"></div>
+
+  </div>
+
+  <script type="module" src="/js/02-catalog.js"></script>
+</body>
+</html>

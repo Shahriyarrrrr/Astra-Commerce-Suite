@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astra — Order Complete</title>
+  <link rel="stylesheet" href="/css/06-order-confirmation.css"/>
+</head>
+<body>
+  <div id="ocApp" class="theme-light">
+
+    <header class="oc-header">
+      <h1>Order Confirmation</h1>
+      <button id="ocTheme" class="btn-icon">Theme</button>
+    </header>
+
+    <main class="oc-main">
+      <div class="oc-card">
+        <div class="oc-icon-wrap">
+          <div class="oc-icon"></div>
+        </div>
+
+        <h2 id="ocMsg" class="oc-title">Thank you for your purchase!</h2>
+
+        <div id="ocOrderId" class="oc-order-id">Order: —</div>
+
+        <div class="oc-grid">
+          <div class="oc-section">
+            <h3>Delivery Estimate</h3>
+            <div id="ocEta" class="oc-eta">Processing...</div>
+          </div>
+
+          <div class="oc-section">
+            <h3>Payment Method</h3>
+            <div id="ocPay" class="oc-pay">—</div>
+          </div>
+
+          <div class="oc-section">
+            <h3>Shipping Method</h3>
+            <div id="ocShip" class="oc-ship">—</div>
+          </div>
+        </div>
+
+        <div class="oc-items">
+          <h3>Your Items</h3>
+          <div id="ocItems" class="oc-items-list"></div>
+        </div>
+
+        <div class="oc-totals">
+          <div class="rw"><span>Subtotal</span><span id="ocSub">$0.00</span></div>
+          <div class="rw"><span>Shipping</span><span id="ocShipCost">$0.00</span></div>
+          <div class="rw total"><span>Total</span><span id="ocTotal">$0.00</span></div>
+        </div>
+
+        <div class="oc-actions">
+          <button id="ocInvoice" class="btn primary">Download Invoice</button>
+          <a href="/pages/02-catalog.html" class="btn ghost">Continue Shopping</a>
+        </div>
+      </div>
+    </main>
+
+    <div id="ocToast" class="oc-toast">Downloading...</div>
+
+    <footer class="oc-footer">
+      © Astra Confirmation
+    </footer>
+  </div>
+
+  <script type="module" src="/js/06-order-confirmation.js"></script>
+</body>
+</html>

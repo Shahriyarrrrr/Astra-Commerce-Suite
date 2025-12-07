@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Astra — Login</title>
+  <link rel="stylesheet" href="/css/09-login.css"/>
+</head>
+<body>
+<div id="loginApp" class="theme-light">
+
+  <div class="bg-float"></div>
+
+  <div class="login-box">
+    <h1>Welcome Back</h1>
+    <p class="subtitle">Access your Astra account</p>
+
+    <div class="role-select">
+      <button data-role="user" class="role-btn active">User</button>
+      <button data-role="admin" class="role-btn">Admin</button>
+      <button data-role="developer" class="role-btn">Developer</button>
+    </div>
+
+    <form id="loginForm" class="form">
+      <input id="lgEmail" placeholder="Email"/>
+      <div class="pw-wrap">
+        <input id="lgPassword" type="password" placeholder="Password"/>
+        <span id="pwToggle" class="pw-eye">👁️</span>
+      </div>
+
+      <div id="pwMeter" class="pw-meter">
+        <div class="pw-fill"></div>
+      </div>
+
+      <button id="lgSubmit" class="btn primary">Login</button>
+    </form>
+
+    <div id="lgError" class="error-msg"></div>
+
+    <button id="lgTheme" class="btn-icon theme-btn">Theme</button>
+  </div>
+
+</div>
+
+<script type="module" src="/js/09-login.js"></script>
+</body>
+</html>
